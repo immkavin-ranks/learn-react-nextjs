@@ -8,12 +8,16 @@
     <script type="text/jsx">
       const domNode = document.getElementById('app');
       const root = ReactDOM.createRoot(domNode);
-      function Header() {
-        return(<h1>Develop. Preview. Ship.</h1>);
+
+      function Header({ title }) {
+        return(<h1>{title ? `Cool ${title}` : 'Default Title'}</h1>);
       }
+
       function HomePage() {
         return(
           <div>
+            <Header title="React" />
+            <Header title="Hello World!" />
             <Header />
           </div>
         )
